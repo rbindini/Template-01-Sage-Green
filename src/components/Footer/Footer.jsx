@@ -23,7 +23,7 @@ const Footer = ({ showBrand = true }) => {
     <footer className="footer">
       <div className="footer-overlay"></div>
 
-      <div className="footer-container"></div>
+      <div className="footer-container">
               <motion.div
           className="footer-divider"
           initial={{ opacity: 0, width: 0 }}
