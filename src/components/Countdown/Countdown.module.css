@@ -1,0 +1,289 @@
+.countdown {
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 140px 20px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------------- Paper Texture ---------------- */
+
+.paper {
+
+    position: absolute;
+    inset: 0;
+
+    opacity: .16;
+
+    mix-blend-mode: multiply;
+
+    pointer-events: none;
+}
+
+/* ---------------- Floral Decorations ---------------- */
+
+.topLeft {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 260px;
+
+    z-index: 2;
+}
+
+.bottomRight {
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 260px;
+
+    z-index: 2;
+}
+
+/* ---------------- Container ---------------- */
+
+.container {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 1320px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+/* ---------------- Heading ---------------- */
+
+.subtitle {
+
+    font-size: .9rem;
+
+    letter-spacing: 5px;
+
+    color: #718066;
+
+    margin-bottom: 18px;
+}
+
+.title {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 4.3rem;
+
+    color: #30402F;
+
+    margin-bottom: 25px;
+}
+
+.divider {
+
+    width: 170px;
+
+    margin-bottom: 70px;
+}
+
+/* ===================================================
+        COUNTDOWN
+=================================================== */
+
+.timer {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 22px;
+
+    flex-wrap: nowrap;
+}
+
+/* ---------------- Box ---------------- */
+
+.box {
+
+    width: 150px;
+
+    height: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255,255,255,.82);
+
+    border: 1px solid rgba(199,169,107,.28);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.08);
+
+    transition: .35s;
+}
+
+.box:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.14);
+}
+
+/* ---------------- Number ---------------- */
+
+.box h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3.6rem;
+
+    line-height: 1;
+
+    color: #30402F;
+
+    margin-bottom: 12px;
+}
+
+/* ---------------- Label ---------------- */
+
+.box span {
+
+    font-size: .82rem;
+
+    letter-spacing: 3px;
+
+    color: #A88946;
+}
+
+/* ===================================================
+        RESPONSIVE
+=================================================== */
+
+@media (max-width:1100px){
+
+.timer{
+
+gap:14px;
+
+}
+
+.box{
+
+width:120px;
+
+height:155px;
+
+}
+
+.box h3{
+
+font-size:3rem;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.countdown{
+
+padding:100px 20px;
+
+}
+
+.title{
+
+font-size:3rem;
+
+}
+
+.timer{
+
+gap:10px;
+
+}
+
+.box{
+
+width:78px;
+
+height:105px;
+
+border-radius:18px;
+
+}
+
+.box h3{
+
+font-size:2rem;
+
+}
+
+.box span{
+
+font-size:.55rem;
+
+letter-spacing:1px;
+
+}
+
+.topLeft,
+.bottomRight{
+
+width:150px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.timer{
+
+gap:6px;
+
+}
+
+.box{
+
+width:68px;
+
+height:95px;
+
+}
+
+.box h3{
+
+font-size:1.7rem;
+
+}
+
+.box span{
+
+font-size:.5rem;
+
+}
+
+}

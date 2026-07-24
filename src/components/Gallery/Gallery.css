@@ -1,0 +1,186 @@
+.gallery {
+  padding: 120px 8%;
+  text-align: center;
+  background: linear-gradient(180deg, #fffdf9 0%, #f8f5ef 100%);
+}
+
+.gallery-header {
+  max-width: 760px;
+  margin: 0 auto 70px;
+}
+
+.gallery-subtitle {
+  display: inline-block;
+  color: #8a9d82;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.gallery h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 52px;
+  color: #5d7662;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.gallery-divider {
+  font-size: 30px;
+  color: #7d9876;
+  margin: 18px 0;
+}
+
+.gallery-header p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.gallery-grid {
+  columns: 3;
+  column-gap: 24px;
+}
+
+.photo {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 24px;
+  cursor: pointer;
+
+  background: white;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.06),
+    0 4px 12px rgba(0, 0, 0, 0.04);
+
+  transition: all .45s ease;
+}
+
+.photo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+  transition: transform .7s ease;
+}
+
+/* Masonry Heights */
+
+.photo:nth-child(1) img {
+  height: 430px;
+}
+
+.photo:nth-child(2) img {
+  height: 270px;
+}
+
+.photo:nth-child(3) img {
+  height: 350px;
+}
+
+.photo:nth-child(4) img {
+  height: 290px;
+}
+
+.photo:nth-child(5) img {
+  height: 430px;
+}
+
+.photo:nth-child(6) img {
+  height: 330px;
+}
+
+.photo:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,.12),
+    0 8px 18px rgba(0,0,0,.05);
+}
+
+.photo:hover img {
+  transform: scale(1.06);
+}
+
+.photo::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.22),
+    rgba(0,0,0,0)
+  );
+
+  opacity: 0;
+
+  transition: .4s;
+}
+
+.photo:hover::after {
+  opacity: 1;
+}
+
+/* Tablet */
+
+@media (max-width:768px) {
+
+  .gallery {
+    padding: 90px 20px;
+  }
+
+  .gallery-grid {
+    columns: 2;
+    column-gap: 18px;
+  }
+
+  .photo {
+    margin-bottom: 18px;
+  }
+
+  .gallery h2 {
+    font-size: 40px;
+  }
+
+  .gallery-header p {
+    font-size: 16px;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px) {
+
+  .gallery {
+    padding: 70px 18px;
+  }
+
+  .gallery-grid {
+    columns: 1;
+  }
+
+  .gallery h2 {
+    font-size: 34px;
+  }
+
+  .gallery-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .gallery-header p {
+    font-size: 15px;
+  }
+
+  .photo img {
+    height: auto !important;
+  }
+
+}

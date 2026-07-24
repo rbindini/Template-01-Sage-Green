@@ -1,0 +1,127 @@
+.countdown{
+
+padding:100px 20px;
+
+background:#f8f4ed;
+
+text-align:center;
+
+}
+
+.countdown h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:48px;
+
+color:#6d8f6a;
+
+margin-bottom:10px;
+
+}
+
+.countdown-date{
+
+font-size:18px;
+
+letter-spacing:3px;
+
+color:#777;
+
+margin-bottom:50px;
+
+}
+
+.timer{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.time-card{
+
+background:white;
+
+padding:28px 20px;
+
+border-radius:25px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.06);
+
+transition:.3s;
+
+}
+
+.time-card:hover{
+
+transform:translateY(-8px) scale(1.03);
+
+}
+
+.time-card h1{
+
+font-size:72px;
+
+font-family:"Cormorant Garamond",serif;
+
+color:#6d8f6a;
+
+margin-bottom:10px;
+
+}
+
+.time-card p{
+
+text-transform:uppercase;
+
+letter-spacing:3px;
+
+font-size:13px;
+
+color:#666;
+
+}
+
+@media(max-width:768px){
+
+.countdown{
+
+padding:70px 20px;
+
+}
+
+.countdown h2{
+
+font-size:36px;
+
+}
+
+.timer{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+}
+
+.time-card{
+
+padding:25px 15px;
+
+}
+
+.time-card h1{
+
+font-size:54px;
+
+}
+
+}

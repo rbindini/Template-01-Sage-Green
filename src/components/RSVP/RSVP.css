@@ -1,0 +1,398 @@
+/* ============================
+   RSVP SECTION
+============================ */
+
+.rsvp {
+  position: relative;
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #f8f5f0 0%, #fefcf8 100%);
+  overflow: hidden;
+}
+
+.rsvp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../../assets/backgrounds/rsvp-bg.webp") center/cover;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+.rsvp-card {
+  position: relative;
+  max-width: 760px;
+  margin: auto;
+  padding: 60px;
+  border-radius: 30px;
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.08),
+    inset 0 1px 0 rgba(255,255,255,.8);
+  z-index: 2;
+}
+
+.rsvp-tag {
+  display: inline-block;
+  padding: 8px 22px;
+  border-radius: 50px;
+  background: #6F785F;
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: .8rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.rsvp-card h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.3rem;
+  color: #30402F;
+  margin-bottom: 15px;
+}
+
+.rsvp-subtitle {
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 45px;
+}
+
+/* ============================
+   FORM
+============================ */
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ============================
+   Attendance
+============================ */
+
+.attendance-section label {
+  display: block;
+  font-weight: 600;
+  color: #30402F;
+  margin-bottom: 15px;
+}
+
+.attendance-buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.attendance-btn {
+  flex: 1;
+  padding: 18px;
+  border-radius: 18px;
+  border: 2px solid #d9dfd3;
+  background: #fff;
+  color: #30402F;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .35s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.attendance-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,.08);
+}
+
+.attendance-btn.active {
+  background: #6F785F;
+  color: #fff;
+  border-color: #6F785F;
+}
+
+.attendance-btn.decline.active {
+  background: #b57b7b;
+  border-color: #b57b7b;
+}
+
+/* ============================
+   INPUTS
+============================ */
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 18px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  background: #fff;
+  transition: .3s;
+}
+
+.input-group:focus-within {
+  border-color: #6F785F;
+  box-shadow: 0 0 0 4px rgba(111,120,95,.12);
+}
+
+.input-group svg {
+  color: #6F785F;
+  font-size: 18px;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 18px 0;
+  font-size: 1rem;
+  color: #30402F;
+}
+
+/* ============================
+   Guest Counter
+============================ */
+
+.guest-counter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guest-counter label {
+  font-weight: 600;
+  color: #30402F;
+}
+
+.counter-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: #fff;
+  padding: 14px;
+}
+
+.counter-box button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #6F785F;
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.counter-box button:hover {
+  transform: scale(1.08);
+}
+
+.counter-box span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #30402F;
+  min-width: 60px;
+  text-align: center;
+}
+/* ============================
+   TEXTAREA
+============================ */
+
+.rsvp-form textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 18px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  color: #30402F;
+  transition: .3s;
+  outline: none;
+}
+
+.rsvp-form textarea:focus {
+  border-color: #6F785F;
+  box-shadow: 0 0 0 4px rgba(111,120,95,.12);
+}
+
+/* ============================
+   ERROR MESSAGE
+============================ */
+
+.error-box {
+  background: #fff2f2;
+  color: #b53d3d;
+  border: 1px solid #f0c6c6;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: .95rem;
+}
+
+/* ============================
+   SUBMIT BUTTON
+============================ */
+
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg,#6F785F,#556247);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .35s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  letter-spacing: .5px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(111,120,95,.30);
+}
+
+.submit-btn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+/* ============================
+   SUCCESS CARD
+============================ */
+
+.success-card {
+  text-align: center;
+  padding: 50px 30px;
+}
+
+.success-heart {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: rgba(111,120,95,.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+}
+
+.success-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.4rem;
+  color: #30402F;
+  margin-bottom: 18px;
+}
+
+.success-card p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  max-width: 420px;
+  margin: auto;
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rsvp-card {
+  animation: fadeUp .7s ease;
+}
+
+/* ============================
+   MOBILE
+============================ */
+
+@media (max-width:768px) {
+
+  .rsvp {
+    padding: 80px 16px;
+  }
+
+  .rsvp-card {
+    padding: 35px 24px;
+    border-radius: 24px;
+  }
+
+  .rsvp-card h2 {
+    font-size: 2.5rem;
+  }
+
+  .rsvp-subtitle {
+    font-size: .95rem;
+  }
+
+  .attendance-buttons {
+    flex-direction: column;
+  }
+
+  .attendance-btn {
+    width: 100%;
+  }
+
+  .counter-box {
+    gap: 18px;
+  }
+
+  .counter-box span {
+    min-width: 40px;
+    font-size: 1.1rem;
+  }
+
+  .submit-btn {
+    font-size: .95rem;
+  }
+}
+
+@media (max-width:480px) {
+
+  .rsvp-card h2 {
+    font-size: 2rem;
+  }
+
+  .rsvp-tag {
+    font-size: .7rem;
+    letter-spacing: 2px;
+  }
+
+  .success-heart {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+  }
+
+  .success-card h3 {
+    font-size: 2rem;
+  }
+
+  .input-group input,
+  .rsvp-form textarea {
+    font-size: .95rem;
+  }
+}

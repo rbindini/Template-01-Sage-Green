@@ -1,0 +1,431 @@
+.events{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:140px 20px;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* ---------------------------------- */
+
+.paper{
+
+    position:absolute;
+    inset:0;
+
+    opacity:.16;
+
+    mix-blend-mode:multiply;
+
+    pointer-events:none;
+}
+
+/* ---------------------------------- */
+
+.topLeft{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:260px;
+
+    z-index:2;
+}
+
+.bottomRight{
+
+    position:absolute;
+
+    right:0;
+    bottom:0;
+
+    width:260px;
+
+    z-index:2;
+}
+
+/* ---------------------------------- */
+
+.container{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+/* ---------------------------------- */
+
+.subtitle{
+
+    font-size:.95rem;
+
+    letter-spacing:5px;
+
+    color:#6C775E;
+
+    margin-bottom:18px;
+}
+
+.title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:4.3rem;
+
+    color:#30402F;
+
+    margin-bottom:25px;
+}
+
+.divider{
+
+    width:180px;
+
+    margin-bottom:70px;
+}
+
+/* ==========================================
+                GRID
+========================================== */
+
+.grid{
+
+    display:grid;
+
+    gap:35px;
+}
+
+/* 1 Event */
+
+.items1{
+
+    max-width:420px;
+
+    margin:auto;
+
+    grid-template-columns:1fr;
+}
+
+/* 2 Events */
+
+.items2{
+
+    grid-template-columns:repeat(2,1fr);
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+/* 3 Events */
+
+.items3{
+
+    grid-template-columns:repeat(3,1fr);
+}
+
+/* 4 Events */
+
+.items4{
+
+    grid-template-columns:repeat(2,1fr);
+
+    max-width:980px;
+
+    margin:auto;
+}
+
+/* 5+ Events */
+
+.items5,
+.items6,
+.items7,
+.items8,
+.items9,
+.items10{
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+}
+
+/* ==========================================
+                CARD
+========================================== */
+
+.card{
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    border:1px solid rgba(201,172,108,.28);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:5px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #d8c08b,
+        #b88a3f,
+        #d8c08b
+    );
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+        0 28px 60px rgba(0,0,0,.13);
+}
+
+/* ==========================================
+                ICON
+========================================== */
+
+.icon{
+
+    width:72px;
+
+    height:72px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#F8F4EA;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+    border:1px solid #D6C091;
+}
+
+/* ==========================================
+                TITLE
+========================================== */
+
+.card h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.3rem;
+
+    color:#30402F;
+
+    margin-bottom:18px;
+}
+
+/* ==========================================
+                DIVIDER
+========================================== */
+
+.line{
+
+    width:70px;
+
+    height:2px;
+
+    background:#C7A96B;
+
+    margin:0 auto 28px;
+}
+
+/* ==========================================
+                INFO
+========================================== */
+
+.info{
+
+    margin-bottom:22px;
+}
+
+.info h4{
+
+    font-size:.82rem;
+
+    letter-spacing:3px;
+
+    color:#B18A46;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+}
+
+.info p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:5px;
+}
+
+.info span{
+
+    display:block;
+
+    color:#888;
+
+    font-size:.9rem;
+}
+
+/* ==========================================
+                BUTTON
+========================================== */
+
+.button{
+
+    margin-top:20px;
+
+    padding:13px 34px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#30402F;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:.9rem;
+
+    letter-spacing:2px;
+}
+
+.button:hover{
+
+    background:#B89452;
+}
+
+/* ==========================================
+                TABLET
+========================================== */
+
+@media(max-width:1000px){
+
+.items2,
+.items3,
+.items4,
+.items5,
+.items6,
+.items7,
+.items8,
+.items9,
+.items10{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.title{
+
+    font-size:3.4rem;
+
+}
+
+}
+
+/* ==========================================
+                MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.events{
+
+    padding:100px 20px;
+
+}
+
+.grid{
+
+    grid-template-columns:1fr !important;
+
+}
+
+.card{
+
+    padding:35px 25px;
+
+}
+
+.card h3{
+
+    font-size:2rem;
+
+}
+
+.title{
+
+    font-size:2.8rem;
+
+}
+
+.subtitle{
+
+    letter-spacing:3px;
+
+}
+
+.topLeft,
+.bottomRight{
+
+    width:150px;
+
+}
+
+}

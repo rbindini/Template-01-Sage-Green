@@ -1,0 +1,50 @@
+.story {
+    padding: 120px 24px;
+    background: #f8f4ee;
+}
+
+.container {
+    max-width: 760px;
+    margin: auto;
+    text-align: center;
+}
+
+.subtitle {
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    color: #a58862;
+    font-size: .8rem;
+    margin-bottom: 18px;
+}
+
+.heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: #5d4932;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background: #b49467;
+    margin: 35px auto;
+    border-radius: 10px;
+}
+
+.text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #6f5b47;
+    max-width: 650px;
+    margin: auto;
+}
+
+.quote {
+    margin-top: 50px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #a07c51;
+    font-style: italic;
+}

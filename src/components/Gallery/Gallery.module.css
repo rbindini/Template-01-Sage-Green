@@ -1,0 +1,381 @@
+.gallery {
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 140px 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ============================================= */
+
+.paper {
+
+    position: absolute;
+    inset: 0;
+
+    opacity: .16;
+
+    mix-blend-mode: multiply;
+
+    pointer-events: none;
+}
+
+/* ============================================= */
+
+.topLeft {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 260px;
+
+    z-index: 2;
+}
+
+.bottomRight {
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 260px;
+
+    z-index: 2;
+}
+
+/* ============================================= */
+
+.container {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+/* ============================================= */
+
+.subtitle {
+
+    font-size: .9rem;
+
+    letter-spacing: 5px;
+
+    color: #6F785F;
+
+    margin-bottom: 18px;
+}
+
+.title {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 4.3rem;
+
+    color: #30402F;
+
+    margin-bottom: 25px;
+}
+
+.divider {
+
+    width: 180px;
+
+    margin-bottom: 70px;
+}
+
+/* ============================================= */
+
+.sliderWrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+}
+
+/* ============================================= */
+
+.slider {
+
+    width: 100%;
+
+    display: flex;
+
+    gap: 28px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    scroll-snap-type: x mandatory;
+
+    padding: 20px 10vw;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+
+    display: none;
+}
+
+/* ============================================= */
+
+.card {
+
+    flex: 0 0 420px;
+
+    height: 520px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    scroll-snap-align: center;
+
+    box-shadow:
+
+        0 18px 45px rgba(0,0,0,.12);
+
+    transition: .4s;
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+}
+
+.card img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.card:hover img {
+
+    transform: scale(1.08);
+}
+
+/* ============================================= */
+
+.arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: rgba(255,255,255,.92);
+
+    backdrop-filter: blur(12px);
+
+    color: #30402F;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    box-shadow:
+
+        0 12px 25px rgba(0,0,0,.15);
+
+    transition: .3s;
+}
+
+.arrow:hover {
+
+    background: #30402F;
+
+    color: white;
+
+    transform: translateY(-50%) scale(1.08);
+}
+
+.left {
+
+    left: 35px;
+}
+
+.right {
+
+    right: 35px;
+}
+
+/* ============================================= */
+
+.swipeText {
+
+    margin-top: 35px;
+
+    color: #8A8A8A;
+
+    font-size: .95rem;
+
+    letter-spacing: 2px;
+}
+
+/* ============================================= */
+
+@media (max-width:1200px){
+
+.card{
+
+flex:0 0 360px;
+
+height:460px;
+
+}
+
+.slider{
+
+padding:20px 8vw;
+
+}
+
+}
+
+/* ============================================= */
+
+@media (max-width:900px){
+
+.card{
+
+flex:0 0 300px;
+
+height:400px;
+
+}
+
+.arrow{
+
+width:50px;
+
+height:50px;
+
+font-size:18px;
+
+}
+
+.left{
+
+left:15px;
+
+}
+
+.right{
+
+right:15px;
+
+}
+
+}
+
+/* ============================================= */
+
+@media (max-width:768px){
+
+.gallery{
+
+padding:100px 0;
+
+}
+
+.title{
+
+font-size:3rem;
+
+}
+
+.subtitle{
+
+letter-spacing:3px;
+
+}
+
+.slider{
+
+gap:18px;
+
+padding:20px 25px;
+
+}
+
+.card{
+
+flex:0 0 250px;
+
+height:340px;
+
+}
+
+.arrow{
+
+display:none;
+
+}
+
+.swipeText{
+
+font-size:.8rem;
+
+}
+
+.topLeft,
+.bottomRight{
+
+width:150px;
+
+}
+
+}
+
+/* ============================================= */
+
+@media (max-width:480px){
+
+.card{
+
+flex:0 0 220px;
+
+height:290px;
+
+}
+
+.slider{
+
+padding:20px 18px;
+
+}
+
+}

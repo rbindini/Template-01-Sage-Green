@@ -1,0 +1,518 @@
+/* =========================================================
+   EVENTS SECTION
+========================================================= */
+
+.events {
+  position: relative;
+  width: 100%;
+  padding: 120px 20px;
+  overflow: hidden;
+
+  background-image: url("../../assets/backgrounds/events-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.events-bg-overlay {
+  background: rgba(255, 253, 249, 0.78);
+  backdrop-filter: blur(2px);
+  padding: 40px 0;
+}
+
+.events-header {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-top-line {
+  width: 90px;
+  height: 2px;
+  background: #c9a24d;
+  display: block;
+  margin: auto auto 24px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #8c7b52;
+  margin-bottom: 12px;
+}
+
+.events-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 58px;
+  color: #4e6655;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   EVENTS GRID
+========================================================= */
+
+.events-container {
+  width: min(1100px, 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 45px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.event-card {
+  position: relative;
+
+  background: rgba(255,255,255,.92);
+
+  border-radius: 28px;
+
+  padding: 45px 40px;
+
+  text-align: center;
+
+  border: 1px solid rgba(170,150,100,.18);
+
+  box-shadow:
+      0 18px 40px rgba(0,0,0,.08),
+      0 6px 15px rgba(0,0,0,.04);
+
+  transition: .45s ease;
+}
+
+.event-card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow:
+      0 28px 65px rgba(0,0,0,.12),
+      0 8px 18px rgba(0,0,0,.06);
+
+}
+
+/* subtle gold line */
+
+.event-card::before {
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:40px;
+  right:40px;
+
+  height:4px;
+
+  border-radius:20px;
+
+  background:linear-gradient(
+      90deg,
+      transparent,
+      #d7b466,
+      transparent
+  );
+
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.event-icon {
+
+  width:84px;
+  height:84px;
+
+  margin:auto;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#eef3ed;
+
+  color:#65806a;
+
+  font-size:34px;
+
+  margin-bottom:28px;
+
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.event-card h3 {
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:38px;
+
+  color:#49614f;
+
+  font-weight:500;
+
+  margin-bottom:28px;
+
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.gold-divider{
+
+    width:80px;
+
+    height:2px;
+
+    background:#d4b16d;
+
+    margin:0 auto 35px;
+
+}
+/* =========================================================
+   EVENT CONTENT
+========================================================= */
+
+.event-content{
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+    margin-bottom:40px;
+}
+
+.event-block{
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:#faf8f3;
+
+    border:1px solid rgba(201,162,77,.12);
+
+    transition:.35s;
+}
+
+.event-block:hover{
+
+    background:#ffffff;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.05);
+
+}
+
+.event-block span{
+
+    display:block;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#b28a3b;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+}
+
+.event-block h4{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:30px;
+
+    color:#4d6654;
+
+    font-weight:500;
+
+}
+
+.event-block p{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:17px;
+
+    color:#666;
+
+    line-height:1.7;
+}
+
+.event-block svg{
+
+    color:#8c6f38;
+
+    font-size:18px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.button-group{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+.button-group a{
+
+    flex:1;
+
+    min-width:170px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px 24px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    font-size:15px;
+}
+
+.map-btn{
+
+    background:#5d7662;
+
+    color:#fff;
+}
+
+.map-btn:hover{
+
+    background:#4c6351;
+
+    transform:translateY(-3px);
+}
+
+.calendar-btn{
+
+    background:transparent;
+
+    color:#5d7662;
+
+    border:2px solid #5d7662;
+}
+
+.calendar-btn:hover{
+
+    background:#5d7662;
+
+    color:#fff;
+
+    transform:translateY(-3px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:992px){
+
+.events{
+
+    padding:100px 20px;
+}
+
+.events-header{
+
+    margin-bottom:60px;
+}
+
+.events-header h2{
+
+    font-size:48px;
+}
+
+.events-container{
+
+    gap:30px;
+}
+
+.event-card{
+
+    padding:35px;
+}
+
+.event-card h3{
+
+    font-size:32px;
+}
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+.events{
+
+    padding:80px 18px;
+}
+
+.events-header{
+
+    margin-bottom:45px;
+}
+
+.events-header h2{
+
+    font-size:38px;
+}
+
+.section-description{
+
+    font-size:16px;
+}
+
+.events-container{
+
+    grid-template-columns:1fr;
+
+    gap:28px;
+}
+
+.event-card{
+
+    padding:28px 22px;
+}
+
+.event-icon{
+
+    width:70px;
+    height:70px;
+
+    font-size:28px;
+}
+
+.event-card h3{
+
+    font-size:28px;
+}
+
+.event-block{
+
+    padding:18px;
+}
+
+.event-block h4{
+
+    font-size:24px;
+}
+
+.event-block p{
+
+    font-size:15px;
+}
+
+.button-group{
+
+    flex-direction:column;
+}
+
+.button-group a{
+
+    width:100%;
+}
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:420px){
+
+.events-header h2{
+
+    font-size:32px;
+}
+
+.section-subtitle{
+
+    font-size:11px;
+
+    letter-spacing:2px;
+}
+
+.event-card{
+
+    padding:22px 18px;
+}
+
+.event-icon{
+
+    width:60px;
+    height:60px;
+
+    font-size:24px;
+}
+
+.event-card h3{
+
+    font-size:24px;
+}
+
+.event-block h4{
+
+    font-size:20px;
+}
+
+.button-group a{
+
+    font-size:14px;
+
+    padding:14px 18px;
+}
+
+}

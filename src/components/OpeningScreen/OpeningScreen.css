@@ -1,0 +1,602 @@
+/* ===========================================================
+   OPENING SCREEN
+=========================================================== */
+
+.opening-screen {
+
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f8f5ef;
+
+    z-index: 99999;
+
+}
+
+/* ===========================================================
+   BACKGROUND
+=========================================================== */
+
+.background-wrapper{
+
+    position:absolute;
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.background-image{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:scale(1.05);
+
+}
+
+.watercolor-overlay{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.25;
+
+    mix-blend-mode:multiply;
+
+}
+
+.background-gradient{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(255,255,255,.35),
+    transparent 60%);
+
+}
+
+.background-glow{
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    left:50%;
+    top:42%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.22);
+
+    filter:blur(120px);
+
+}
+
+/* ===========================================================
+   ENVELOPE
+=========================================================== */
+
+.envelope-wrapper{
+
+    position:relative;
+
+    width:min(430px,88vw);
+
+    aspect-ratio:0.70;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    animation:
+        envelopeFloat 5s ease-in-out infinite;
+
+    z-index:10;
+
+}
+
+.premium-back{
+
+    position:absolute;
+
+    width:100%;
+
+    z-index:0;
+
+}
+
+.envelope{
+
+    position:absolute;
+
+    width:88%;
+
+    aspect-ratio:.70;
+
+}
+
+/* ===========================================================
+   INNER LINING
+=========================================================== */
+
+.inner-lining{
+
+    position:absolute;
+
+    width:100%;
+
+    z-index:1;
+
+}
+
+/* ===========================================================
+   BODY
+=========================================================== */
+
+.envelope-body{
+
+    position:absolute;
+
+    width:100%;
+
+    z-index:5;
+
+}
+
+/* ===========================================================
+   FLAP
+=========================================================== */
+
+.flap-wrapper{
+
+    position:absolute;
+    inset:0;
+
+    transform-origin:top center;
+
+    transition:
+    transform 1.3s cubic-bezier(.18,.9,.2,1);
+
+    z-index:12;
+
+}
+
+.flap-wrapper.open{
+
+    transform:
+    perspective(1500px)
+    rotateX(-176deg);
+
+}
+
+.flap-image{
+
+    width:100%;
+    display:block;
+
+}
+/* ===========================================================
+   WAX SEAL
+=========================================================== */
+
+.wax-button{
+
+    position:absolute;
+
+    left:50%;
+    bottom:6.5%;
+
+    width:82px;
+    height:82px;
+
+    transform:
+        translateX(-50%)
+        scale(1);
+
+    background:none;
+    border:none;
+    padding:0;
+
+    cursor:pointer;
+
+    transition:
+        transform .25s ease,
+        filter .25s ease;
+
+    z-index:20;
+
+}
+
+.wax-button:hover{
+
+    transform:
+        translateX(-50%)
+        scale(1.05);
+
+    filter:drop-shadow(0 8px 18px rgba(0,0,0,.22));
+
+}
+
+.wax-button:disabled{
+
+    pointer-events:none;
+
+}
+
+.wax-button.pressed{
+
+    transform:
+        translateX(-50%)
+        scale(.90);
+
+}
+
+.wax-seal{
+
+    width:100%;
+    display:block;
+
+}
+
+.wax-shadow{
+
+    position:absolute;
+
+    left:50%;
+    bottom:5.5%;
+
+    width:86px;
+
+    opacity:.30;
+
+    transform:translateX(-50%);
+
+    transition:.25s;
+
+    z-index:18;
+
+}
+
+.wax-shadow.pressed{
+
+    opacity:.18;
+
+    transform:
+        translateX(-50%)
+        scale(.86);
+
+}
+
+/* ===========================================================
+   INVITATION CARD
+=========================================================== */
+
+.invitation-card{
+
+    position:absolute;
+
+    left:50%;
+    bottom:15%;
+
+    width:78%;
+
+    aspect-ratio:.70;
+
+    transform:
+        translateX(-50%)
+        translateY(170px);
+
+    opacity:0;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 18px 55px rgba(0,0,0,.20);
+
+    transition:
+
+        transform 1.4s cubic-bezier(.18,.85,.2,1),
+
+        opacity .8s ease,
+
+        width 1.2s ease,
+
+        height 1.2s ease,
+
+        border-radius .9s ease;
+
+    z-index:4;
+
+}
+
+.invitation-card.show{
+
+    opacity:1;
+
+    transform:
+        translateX(-50%)
+        translateY(-38px);
+
+}
+
+.invitation-card.expand{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    border-radius:0;
+
+    transform:none;
+
+    z-index:99998;
+
+}
+
+/* ===========================================================
+   PAPER
+=========================================================== */
+
+.paper-texture{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.95;
+
+}
+
+.card-content{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+/* ===========================================================
+   TYPOGRAPHY
+=========================================================== */
+
+.invite-label{
+
+    font-size:.82rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    color:#6f6b61;
+
+    margin-bottom:20px;
+
+}
+
+.couple-title{
+
+    font-size:2.9rem;
+
+    font-weight:400;
+
+    color:#4b4a40;
+
+    line-height:1.25;
+
+    text-align:center;
+
+}
+
+.couple-title span{
+
+    display:block;
+
+    color:#b69762;
+
+    margin:.45rem 0;
+
+    font-size:1.5rem;
+
+}
+
+.gold-divider{
+
+    width:92px;
+    height:2px;
+
+    background:#ccb27b;
+
+    margin:28px 0;
+
+}
+
+.couple-artwork{
+
+    width:180px;
+
+    margin-bottom:24px;
+
+}
+
+.wedding-date{
+
+    font-size:.95rem;
+
+    letter-spacing:2px;
+
+    color:#7b7468;
+
+    text-transform:uppercase;
+
+}
+
+.date-number{
+
+    margin-top:8px;
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    color:#4c4a42;
+
+}
+
+.venue-preview{
+
+    margin-top:18px;
+
+    color:#837d73;
+
+    letter-spacing:1px;
+
+}
+
+/* ===========================================================
+   FLOATING ANIMATION
+=========================================================== */
+
+@keyframes envelopeFloat{
+
+    0%{
+
+        transform:
+            translateY(0px);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0px);
+
+    }
+
+}
+
+/* ===========================================================
+   MOBILE
+=========================================================== */
+
+@media (max-width:768px){
+
+    .envelope-wrapper{
+
+        width:92vw;
+
+    }
+
+    .wax-button{
+
+        width:68px;
+        height:68px;
+
+    }
+
+    .wax-shadow{
+
+        width:70px;
+
+    }
+
+    .couple-title{
+
+        font-size:2rem;
+
+    }
+
+    .couple-artwork{
+
+        width:140px;
+
+    }
+
+    .card-content{
+
+        padding:26px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .couple-title{
+
+        font-size:1.65rem;
+
+    }
+
+    .invite-label{
+
+        font-size:.72rem;
+
+    }
+
+    .date-number{
+
+        font-size:1.5rem;
+
+    }
+
+    .venue-preview{
+
+        font-size:.85rem;
+
+    }
+
+}

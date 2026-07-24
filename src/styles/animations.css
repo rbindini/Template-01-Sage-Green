@@ -1,0 +1,364 @@
+/* ==========================================================
+   WedInvite Heritage Luxe
+   Animation System
+========================================================== */
+
+/* ----------------------------------------------------------
+   TRANSITIONS
+---------------------------------------------------------- */
+
+.fade-transition {
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.fast-transition {
+  transition: all .3s ease;
+}
+
+.slow-transition {
+  transition: all .8s ease;
+}
+
+/* ----------------------------------------------------------
+   FADE UP
+---------------------------------------------------------- */
+
+@keyframes fadeUp {
+
+  from{
+    opacity:0;
+    transform:translateY(50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.fade-up{
+
+  animation:fadeUp .8s ease forwards;
+
+}
+
+/* ----------------------------------------------------------
+   FADE DOWN
+---------------------------------------------------------- */
+
+@keyframes fadeDown{
+
+  from{
+    opacity:0;
+    transform:translateY(-40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.fade-down{
+
+  animation:fadeDown .8s ease forwards;
+
+}
+
+/* ----------------------------------------------------------
+   FADE IN
+---------------------------------------------------------- */
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+  }
+
+  to{
+    opacity:1;
+  }
+
+}
+
+.fade-in{
+
+  animation:fadeIn 1s ease forwards;
+
+}
+
+/* ----------------------------------------------------------
+   SCALE IN
+---------------------------------------------------------- */
+
+@keyframes scaleIn{
+
+  from{
+
+    opacity:0;
+
+    transform:scale(.94);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:scale(1);
+
+  }
+
+}
+
+.scale-in{
+
+  animation:scaleIn .7s ease forwards;
+
+}
+
+/* ----------------------------------------------------------
+   FLOAT
+---------------------------------------------------------- */
+
+@keyframes floating{
+
+  0%{
+
+    transform:translateY(0);
+
+  }
+
+  50%{
+
+    transform:translateY(-8px);
+
+  }
+
+  100%{
+
+    transform:translateY(0);
+
+  }
+
+}
+
+.float{
+
+  animation:floating 5s ease-in-out infinite;
+
+}
+
+/* ----------------------------------------------------------
+   GLOW
+---------------------------------------------------------- */
+
+@keyframes goldGlow{
+
+  0%{
+
+    box-shadow:0 0 0 rgba(200,169,106,.2);
+
+  }
+
+  50%{
+
+    box-shadow:0 12px 32px rgba(200,169,106,.35);
+
+  }
+
+  100%{
+
+    box-shadow:0 0 0 rgba(200,169,106,.2);
+
+  }
+
+}
+
+.glow{
+
+  animation:goldGlow 3s ease-in-out infinite;
+
+}
+
+/* ----------------------------------------------------------
+   IMAGE HOVER
+---------------------------------------------------------- */
+
+.zoom-hover{
+
+  overflow:hidden;
+
+}
+
+.zoom-hover img{
+
+  transition:transform .8s ease;
+
+}
+
+.zoom-hover:hover img{
+
+  transform:scale(1.08);
+
+}
+
+/* ----------------------------------------------------------
+   CARD HOVER
+---------------------------------------------------------- */
+
+.hover-lift{
+
+  transition:all .4s ease;
+
+}
+
+.hover-lift:hover{
+
+  transform:translateY(-10px);
+
+  box-shadow:var(--shadow-heavy);
+
+}
+
+/* ----------------------------------------------------------
+   BUTTON HOVER
+---------------------------------------------------------- */
+
+.button-hover{
+
+  transition:all .35s ease;
+
+}
+
+.button-hover:hover{
+
+  transform:translateY(-4px);
+
+}
+
+/* ----------------------------------------------------------
+   ICON ROTATE
+---------------------------------------------------------- */
+
+.icon-rotate{
+
+  transition:.5s ease;
+
+}
+
+.icon-rotate:hover{
+
+  transform:rotate(15deg);
+
+}
+
+/* ----------------------------------------------------------
+   SOFT PULSE
+---------------------------------------------------------- */
+
+@keyframes softPulse{
+
+  0%{
+
+    transform:scale(1);
+
+  }
+
+  50%{
+
+    transform:scale(1.03);
+
+  }
+
+  100%{
+
+    transform:scale(1);
+
+  }
+
+}
+
+.soft-pulse{
+
+  animation:softPulse 4s ease infinite;
+
+}
+
+/* ----------------------------------------------------------
+   PAPER REVEAL
+---------------------------------------------------------- */
+
+@keyframes paperReveal{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    clip-path:inset(20% 0 20% 0);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    clip-path:inset(0);
+
+  }
+
+}
+
+.paper-reveal{
+
+  animation:paperReveal .9s ease forwards;
+
+}
+
+/* ----------------------------------------------------------
+   STAGGER DELAYS
+---------------------------------------------------------- */
+
+.delay-1{
+  animation-delay:.15s;
+}
+
+.delay-2{
+  animation-delay:.3s;
+}
+
+.delay-3{
+  animation-delay:.45s;
+}
+
+.delay-4{
+  animation-delay:.6s;
+}
+
+.delay-5{
+  animation-delay:.75s;
+}
+
+/* ----------------------------------------------------------
+   REDUCE MOTION
+---------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
+
+}
+
+}

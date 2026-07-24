@@ -1,0 +1,185 @@
+.button {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: none;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    border-radius: 999px;
+
+    transition: all .35s ease;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+}
+
+/* --------------------------
+   Sizes
+--------------------------- */
+
+.sm {
+
+    padding: 12px 26px;
+
+    font-size: .9rem;
+
+}
+
+.md {
+
+    padding: 16px 36px;
+
+    font-size: 1rem;
+
+}
+
+.lg {
+
+    padding: 20px 44px;
+
+    font-size: 1.05rem;
+
+}
+
+/* --------------------------
+   Primary
+--------------------------- */
+
+.primary {
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-gold-light),
+        var(--color-gold)
+    );
+
+    box-shadow: 0 14px 35px rgba(200,169,106,.28);
+
+}
+
+.primary:hover {
+
+    transform: translateY(-4px);
+
+    background: linear-gradient(
+        135deg,
+        var(--color-gold),
+        var(--color-gold-dark)
+    );
+
+    box-shadow: 0 20px 42px rgba(200,169,106,.38);
+
+}
+
+/* --------------------------
+   Outline
+--------------------------- */
+
+.outline {
+
+    background: transparent;
+
+    border: 1px solid var(--color-gold);
+
+    color: var(--color-gold-dark);
+
+}
+
+.outline:hover {
+
+    background: var(--color-gold);
+
+    color: white;
+
+    transform: translateY(-3px);
+
+}
+
+/* --------------------------
+   Ghost
+--------------------------- */
+
+.ghost {
+
+    background: rgba(255,255,255,.65);
+
+    backdrop-filter: blur(12px);
+
+    color: var(--color-text-dark);
+
+}
+
+.ghost:hover {
+
+    background: white;
+
+    transform: translateY(-3px);
+
+}
+
+/* --------------------------
+   Icon
+--------------------------- */
+
+.icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: transform .35s ease;
+
+}
+
+.button:hover .icon {
+
+    transform: translateX(4px);
+
+}
+
+/* --------------------------
+   Disabled
+--------------------------- */
+
+.disabled {
+
+    opacity: .55;
+
+    pointer-events: none;
+
+}
+
+/* --------------------------
+   Mobile
+--------------------------- */
+
+@media (max-width:768px){
+
+.button{
+
+width:100%;
+
+}
+
+}

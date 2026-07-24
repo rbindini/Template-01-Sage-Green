@@ -1,0 +1,246 @@
+/* ==========================================================
+   WedInvite Heritage Luxe
+   Typography System
+========================================================== */
+
+/* ----------------------------------------------------------
+   SECTION LABEL
+---------------------------------------------------------- */
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--color-gold-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.22rem;
+  text-transform: uppercase;
+}
+
+/* ----------------------------------------------------------
+   SECTION TITLE
+---------------------------------------------------------- */
+
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* ----------------------------------------------------------
+   LARGE DISPLAY TITLE
+   (Hero Only)
+---------------------------------------------------------- */
+
+.display-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 600;
+  line-height: 0.95;
+  color: var(--color-text-dark);
+  letter-spacing: 1px;
+}
+
+/* ----------------------------------------------------------
+   DECORATIVE SCRIPT
+---------------------------------------------------------- */
+
+.script-text {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  color: var(--color-gold);
+  line-height: 1.2;
+}
+
+/* ----------------------------------------------------------
+   SECTION SUBTITLE
+---------------------------------------------------------- */
+
+.section-subtitle {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  color: var(--color-text-light);
+  text-align: center;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+/* ----------------------------------------------------------
+   CARD TITLE
+---------------------------------------------------------- */
+
+.card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: 12px;
+}
+
+/* ----------------------------------------------------------
+   CARD SUBTITLE
+---------------------------------------------------------- */
+
+.card-subtitle {
+  font-size: 0.95rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: 18px;
+}
+
+/* ----------------------------------------------------------
+   BODY LARGE
+---------------------------------------------------------- */
+
+.body-large {
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+/* ----------------------------------------------------------
+   BODY
+---------------------------------------------------------- */
+
+.body-text {
+  color: var(--color-text);
+  line-height: 1.9;
+}
+
+/* ----------------------------------------------------------
+   SMALL TEXT
+---------------------------------------------------------- */
+
+.small-text {
+  font-size: .9rem;
+  color: var(--color-text-light);
+}
+
+/* ----------------------------------------------------------
+   QUOTE
+---------------------------------------------------------- */
+
+.quote-text {
+  max-width: 760px;
+  margin-inline: auto;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.5rem,3vw,2.2rem);
+  font-style: italic;
+  text-align: center;
+  color: var(--color-text-dark);
+  line-height: 1.7;
+}
+
+/* ----------------------------------------------------------
+   DATE STYLE
+---------------------------------------------------------- */
+
+.date-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem,4vw,3rem);
+  font-weight: 600;
+  color: var(--color-gold-dark);
+  letter-spacing: .08rem;
+}
+
+/* ----------------------------------------------------------
+   GOLD DIVIDER
+---------------------------------------------------------- */
+
+.gold-divider {
+  width: 140px;
+  height: 2px;
+  margin: 30px auto;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold),
+    transparent
+  );
+}
+
+/* ----------------------------------------------------------
+   DECORATIVE ORNAMENT
+---------------------------------------------------------- */
+
+.ornament {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin: 24px 0 36px;
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.ornament span {
+  font-size: 1.1rem;
+  color: var(--color-gold);
+}
+
+/* ----------------------------------------------------------
+   NAME STYLE
+---------------------------------------------------------- */
+
+.couple-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.8rem,7vw,6rem);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  line-height: 1;
+  text-align: center;
+}
+
+/* ----------------------------------------------------------
+   AMPERSAND
+---------------------------------------------------------- */
+
+.ampersand {
+  display: block;
+  margin: 12px 0;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(2.5rem,5vw,4rem);
+  color: var(--color-gold);
+  text-align: center;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------------- */
+
+@media (max-width:768px){
+
+  .section-title{
+    font-size:2.6rem;
+  }
+
+  .display-title{
+    font-size:4rem;
+  }
+
+  .card-title{
+    font-size:1.7rem;
+  }
+
+  .section-subtitle{
+    margin-bottom:40px;
+  }
+
+  .ornament::before,
+  .ornament::after{
+    width:40px;
+  }
+
+}
